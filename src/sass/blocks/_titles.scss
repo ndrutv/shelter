@@ -1,0 +1,9 @@
+.title {
+    @include h3-mobile;
+    &_center {
+        text-align: center;
+    }
+    &_light {
+        color: $color-light-xl;
+    }
+}

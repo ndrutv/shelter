@@ -1,0 +1,77 @@
+.btn {
+    width: 207px;
+    height: 52px;
+    border: none;
+    border-radius: 100px;
+    background-color: $color-primary;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-3-xl;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    &:hover {
+        background-color: $color-primary-light;
+    }
+}
+
+.btn_secondary {
+    border: 2px solid $color-primary;
+    background-color: transparent;
+    transition: background-color 0.4s ease;
+    &:hover {
+        border: none;
+        background-color: $color-primary-light;
+    }
+}
+
+.btn_navigation {
+    @include h-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    border: 2px solid #F1CDB3;
+    border-radius: 100%;
+    cursor: pointer;
+    color: $color-dark-3-xl;
+    transition: background-color 0.4s ease;
+    &:not([disabled]):hover {
+        border: none;
+        background: $color-primary-light;
+    }
+    &[disabled] {
+        color: $color-dark-s;
+        border: 2px solid $color-dark-s;
+    }
+    &_active {
+        border: none;
+        background-color: $color-primary;
+    }
+}
+
+.btn_rounded {
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    width: 52px;
+    height: 52px;
+    font-size: 32px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        background-color: $color-primary-light;
+        border: transparent;
+    }
+}

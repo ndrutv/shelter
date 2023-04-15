@@ -1,0 +1,81 @@
+.donation {
+    display: flex;
+    justify-content: center;
+    background-color: $color-light-l;
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+        padding: 42px 0 39px 0;
+
+        @media (min-width: 768px) {
+            padding: 80px 0 96px 0;
+            gap: 60px;
+        }
+        @media (min-width: 992px) {
+            gap: 30px;
+            padding: 80px 0 99px 0;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 380px;
+        padding: 0 10px;
+
+        @media (min-width: 768px) {
+            padding: 0;
+        }
+    }
+    &__title {
+        @include h3-mobile;
+        color: $color-dark-l;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            @include h3;
+            text-align: left;
+        }
+    }
+    &__subtitle {
+        @include h5-mobile;
+        color: $color-dark-l;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            @include h-5;
+            text-align: left;
+        }
+    }
+    &__credit-card {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
+    }
+    &__legal {
+        @include donation-legal;
+        text-align: justify;
+
+        @media (min-width: 768px) {
+            text-align: unset;
+        }
+    }
+    &__image-container {
+        max-width: 505px;
+        flex: 1 1 350px;
+        padding: 0 20px;
+
+        @media (min-width: 768px) {
+            padding: 0;
+        }
+    }
+    &__image {
+        width: 100%;
+    }
+}

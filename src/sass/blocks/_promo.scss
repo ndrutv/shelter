@@ -1,0 +1,70 @@
+.promo {
+    display: flex;
+    justify-content: center;
+    background: url('../img/bg/bg-promo.jpg') center center/cover no-repeat;
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 42px;
+        padding-top: 150px;
+        min-height: 823px;
+
+        @media (min-width: 768px) {
+            gap: 100px;
+        }
+        @media (min-width: 992px) {
+            padding-top: 180px;
+            gap: 42px;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 42px;
+        max-width: 460px;
+        flex: 1 1 350px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+        @media (min-width: 992px) {
+            align-items: flex-start;
+            padding-top: 164px;
+        }
+    }
+    &__title {
+        @include h3-mobile;
+        color: $color-light-xl;
+
+        @media (min-width: 768px) {
+            @include h-2;
+            align-self: flex-start;
+            letter-spacing: normal;
+        }
+    }
+    &__subtitle {
+        @include paragraph-l;
+        color: $color-dark-s;
+    }
+    &__image-container {
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+        max-width: 698px;
+        flex: 1 1 500px;
+        padding: 0 0 0 40px;
+
+        @media (min-width: 768px) {
+            padding: 0 0 0 130px;
+        }
+        @media (min-width: 992px) {
+            padding: 0;
+        }
+    }
+    &__image {
+        width: 100%;
+    }
+}
